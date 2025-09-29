@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark-only palette tokens */
+:root{
+  --bg-primary:#0A0A0B; --bg-surface:#111113; --bg-sunken:#050505;
+  --accent-gold:#B48C58; --accent-teal:#00FFD1; --accent-plat:#6E7F8A;
+  --glow-gold:0 0 24px rgba(180,140,88,.32);
+  --glow-teal:0 0 16px rgba(0,255,209,.40);
+}
+
+html.dark { background: var(--bg-primary); }
+.bg-glass { @apply bg-black/30 backdrop-blur-xl border border-white/10 rounded-card; }
+.card-border { @apply border border-white/10 rounded-card; }
+
+/* Aurora divider */
+.aurora {
+  background: conic-gradient(from 0deg, transparent, rgba(0,255,209,.2), transparent 30%);
+  animation: spin 20s linear infinite;
+  -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+          mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Motion reduction */
+@media (prefers-reduced-motion: reduce){
+  .aurora{ animation: none; }
+}

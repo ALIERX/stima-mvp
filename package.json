@@ -1,0 +1,30 @@
+{
+  "name": "stima-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --no-cache || true"
+  },
+  "engines": { "node": ">=20.x" },
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "framer-motion": "^11.3.2",
+    "clsx": "^2.1.1",
+    "@react-three/fiber": "^8.16.3",
+    "@react-three/drei": "^9.114.5",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2",
+    "tailwindcss": "^3.4.10",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
+    "eslint-config-next": "14.2.4"
+  }
+}
